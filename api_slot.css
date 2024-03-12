@@ -1,0 +1,315 @@
+body {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: #fffcfe;
+}
+/*------------------------------------------------*/
+/*slot                                            */
+/*------------------------------------------------*/
+ul {
+    list-style: none;
+}
+.slot {
+    width: 90%;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto 1em;
+    border : solid 1px #333 ;
+}
+.slot-frame {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border : solid 1px #333 ;
+    background-color: #ffffff;
+}
+.reels {
+    width: 31%;
+    position: absolute;
+}
+.reels:nth-child(1) {
+    left: 0;
+}
+.reels:nth-child(2) {
+    left: 33%;
+}
+.reels:nth-child(3) {
+    right: 0;
+}
+.reel {
+    height: 270px;
+}
+.reel img {
+    display: block;
+    width: 89%;
+    height: 95%;
+    object-fit: contain;
+    margin: auto;
+}
+
+/*------------------------------------------------*/
+/*select box                                      */
+/*------------------------------------------------*/
+h3, h4 {
+    position: relative;
+    padding: 0.6em;
+    background: #fff1f6;
+    width: 40%;
+    margin:10px auto 20px;
+  }
+  
+  h3:after, h4:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 90px;
+    border: 15px solid transparent;
+    border-top: 15px solid #fff1f6;
+    width: 0;
+    height: 0;
+  }
+.cp_ipselect {
+	overflow: hidden;
+	width: 30%;
+	margin: 0 auto;
+	text-align: center;
+}
+.cp_ipselect select {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect.cp_sl03 {
+	position: relative;
+	border-radius: 2px;
+	border: 2px solid #ec407a;
+	background: #ffffff;
+}
+.cp_ipselect.cp_sl03::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.8em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #ec407a;
+	pointer-events: none;
+}
+.cp_ipselect.cp_sl03 select {
+	padding: 8px 38px 8px 8px;
+	color: #ec407a;
+}
+
+/*------------------------------------------------*/
+/*slot button                                     */
+/*------------------------------------------------*/
+.cp_button11 {
+	width: 160px;
+	margin: 0.4em;
+	padding: 1em;
+	line-height: 1.4;
+	cursor: pointer;
+	user-select: none;
+	transition: background-color 0.3s;
+	-webkit-transform: translateZ(0);
+	        transform: translateZ(0);
+	text-decoration: none;
+	color: #ec407a;
+	border: 1px solid #ec407a;
+	background: transparent;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.cp_button11:before {
+	position: absolute;
+	top: -16px;
+	right: -16px;
+	bottom: -16px;
+	left: -16px;
+	content: '';
+	-webkit-transition-duration: 0.3s;
+	        transition-duration: 0.3s;
+	-webkit-transition-property: top right bottom left;
+	        transition-property: top right bottom left;
+	opacity: 0;
+	border: 4px solid rgba(236,64,122,0.5);
+}
+.cp_button11:hover:before {
+	top: -8px;
+	right: -8px;
+	bottom: -8px;
+	left: -8px;
+	opacity: 1;
+}
+.cp_button11:active {
+	color: #ffffff;
+	background-color: #ec407a;
+}
+.cp_button11:active:before {
+	top: -17px;
+	right: -17px;
+	bottom: -17px;
+	left: -17px;
+}
+.cp_button11:hover,
+.cp_button11:focus {
+	color: #ec407a;
+	border: 1px solid #ec407a;
+}
+.cp_button11:disabled{
+    filter:brightness(0.5);
+    cursor:not-allowed;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    border: none;
+    top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 1;
+    background-color: white;
+}
+.cp_button11:disabled:before{
+
+    border: none;
+}
+
+/*------------------------------------------------*/
+/*start&reset button                              */
+/*------------------------------------------------*/
+.cp_button02 {
+	display: inline-block;
+	width: 160px;
+	padding: 1em;
+	line-height: 1.4em;
+	cursor: pointer;
+	user-select: none;
+	transition: box-shadow 0.2s, transform 0.2s;
+	color: #ec407a;
+	border-width: 0;
+	border-style: solid;
+	background: transparent;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.cp_button02:hover {
+	-webkit-transform: scale(1.02);
+	        transform: scale(1.02);
+	box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.2);
+	color: #ec407a;
+}
+.cp_button02:active {
+	transition-duration: 0.05s;
+	-webkit-transform: scale(0.99);
+	        transform: scale(0.99);
+	box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15) inset;
+}
+.cp_button02:focus,
+.cp_button02:focus:hover {
+	color: #ec407a;
+}
+.cp_button02:disabled{
+    filter:brightness(0.5);
+    cursor:not-allowed;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+/*------------------------------------------------*/
+/*works                                           */
+/*------------------------------------------------*/
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 20px #ccc;
+    transition: 0.5s;
+    width: 70%;
+    margin: 20px auto;
+    border-width: 2px;
+	border-color: #ec407a;
+	border-style: dashed;
+	border-radius: 4px;
+	box-shadow: 0px 0px 0px 3px #fff1f6;
+	background: #fff1f6;
+}
+
+.card-image {
+    width: 40%;
+    height: 200px;
+    object-fit: contain;
+}
+
+
+.card-box {
+    padding-left: 1rem;
+    width: 50%;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-description {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.card-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.card-link:hover .card {
+    box-shadow: 0 5px 10px #ccc;
+}
+
+.cp_block {
+	margin: 5em auto;
+	text-align: center;
+}
+.cp_textlink06 {
+	position: relative;
+	display: inline-block;
+	padding: 0.1em 0.3em;
+	text-decoration: none;
+	color: #ec407a;
+}
+.cp_textlink06:after {
+	position: absolute;
+	bottom: 50%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	content: '';
+	transition: all 0.3s ease;
+	opacity: 0;
+	border-radius: 10px;
+	background-color: #ec407a;
+}
+.cp_textlink06:hover:after {
+	bottom: 0;
+	height: 100%;
+	opacity: 0.3;
+}
