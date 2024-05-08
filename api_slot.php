@@ -1,5 +1,5 @@
 <?php
-    $key = "*********";
+    	$key = "KOH_API_KEY";
 	$url_collections = "https://objecthub.keio.ac.jp/open_koh/v1/collection?api_key=" . $key;
 	$json = file_get_contents($url_collections);
 	$arr = json_decode($json,true);
